@@ -1,5 +1,8 @@
 package edu.gsohz;
 
+import lombok.Getter;
+
+@Getter
 public class Cliente {
     private static int SEQUENCIAL = 1;
 
@@ -11,16 +14,8 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getId() {
-        return id;
     }
 
     @Override

@@ -2,7 +2,7 @@ package edu.gsohz;
 
 public class Main {
     public static void main(String[] args) {
-        Banco banco = new Banco();
+        Banco banco = new Banco("DioBank");
         Cliente gabriel = new Cliente("Gabriel");
         Cliente lissa = new Cliente("Lissa");
 

@@ -1,28 +1,20 @@
 package edu.gsohz;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public class Banco {
 
     private String nome;
     private List<Conta> contas;
 
-    Banco(){
-        this.contas = new ArrayList<>();
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    Banco(String nome){
         this.nome = nome;
-    }
-
-    public List<Conta> getContas() {
-        return contas;
+        this.contas = new ArrayList<>();
     }
 
     public void adicionaConta(Conta conta) {
@@ -42,6 +34,7 @@ public class Banco {
 
     public void imprimirInfomacoesBanco(){
         System.out.println("=== Infos Banco ===");
+        System.out.println("Nome do banco: " + getNome());
         System.out.println("Lista de clientes:" + getClientes());
         System.out.println("Saldo no banco: " + getSaldoTotalBanco());
     }
