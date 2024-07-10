@@ -3,18 +3,15 @@ package edu.gsohz.santander_dw23.service.impl;
 import edu.gsohz.santander_dw23.domain.model.User;
 import edu.gsohz.santander_dw23.domain.repository.UserRepository;
 import edu.gsohz.santander_dw23.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
 
 @Service
 public class UserServiceImpl implements UserService {
-
-    private final UserRepository userRepository;
-
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     public User findById(Long id) {
